@@ -2,7 +2,7 @@
 
 // 1. Import semua yang dibutuhkan dari react-router-dom dan halaman-halamanmu
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
+import HomePage from './components/Homepage';
 import { Pro1Page } from './pages/Pro1Page';
 import { Pro2Page } from './pages/Pro2Page';
 import { Pro4Page } from './pages/Pro4Page';
@@ -20,7 +20,7 @@ import { ManageEventsPage } from './admin/ManageEventsPage';
 function App() {
   return (
      <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Homepage />} />
       <Route path="/pro1" element={<Pro1Page />} />
       <Route path="/pro2" element={<Pro2Page />} />
       <Route path="/pro4" element={<Pro4Page />} />

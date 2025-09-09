@@ -2,7 +2,7 @@
 
 import React from 'react';
 // Pastikan HomePage.jsx mengekspor Navbar dan Footer
-import { Navbar, Footer } from './HomePage';
+import { Navbar, Footer } from './Homepage';
 
 export const Layout = ({ children }) => {
   return (
