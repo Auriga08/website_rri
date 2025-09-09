@@ -1,0 +1,149 @@
+/* src/pages/StrukturOrganisasiPage.css */
+
+.org-section {
+  background-color: white; /* Latar belakang putih bersih */
+  padding: 4rem 1rem;
+}
+
+.org-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.org-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e3a8a; /* Biru tua */
+}
+
+.org-divider {
+  width: 6rem;
+  height: 4px;
+  background-color: #2563eb; /* Biru cerah */
+  margin: 1rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.org-subtitle {
+  font-size: 1.125rem;
+  color: #64748b; /* Abu-abu */
+}
+
+.member-card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+/* Aturan untuk layar medium (tablet) ke atas */
+@media (min-width: 768px) {
+    .member-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Aturan untuk layar besar (desktop) ke atas */
+@media (min-width: 1024px) {
+    .member-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 0.5rem; /* Sudut sedikit melengkung */
+  border: 1px solid #e2e8f0; /* Border abu-abu muda */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.member-photo-wrapper {
+  /* Foto tidak lagi persegi, aspect-ratio dihilangkan */
+  background-color: #f1f5f9;
+}
+
+.member-photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 1.5rem 1rem;
+}
+
+.member-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.25rem;
+}
+
+.member-position {
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.member-department {
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+/* ... (kode CSS yang sudah ada sebelumnya jangan dihapus) ... */
+
+/* === BAGAN ORGANISASI === */
+.org-chart-section {
+  margin-top: 5rem; /* Memberi jarak dari daftar anggota di atas */
+  text-align: center;
+}
+
+.org-chart-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 3rem;
+}
+
+.org-chart-container {
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 1rem; /* Sudut lebih melengkung */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.org-chart-level {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Agar rapi di layar kecil */
+  gap: 1.5rem;
+}
+
+.org-chart-level--sections {
+  margin-top: 2.5rem;
+}
+
+.org-chart-node {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.org-chart-node--head {
+  background-color: #1e3a8a; /* Biru tua */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.org-chart-node--section {
+  background-color: #2563eb; /* Biru cerah */
+}

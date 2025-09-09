@@ -1,0 +1,354 @@
+/* src/components/HomePage.css (Versi Interaktif & Modern) */
+
+:root {
+    --primary-blue-light: #00bfff; /* Biru langit */
+    --primary-blue-dark: #1e90ff; /* Biru dodger */
+    --accent-yellow: #ffe600; /* Kuning cerah */
+    --text-dark: #333;
+    --text-light: #f9fbff;
+    --card-shadow-light: 0 4px 15px rgba(0,0,0,0.08);
+    --card-shadow-hover: 0 8px 25px rgba(0,0,0,0.18);
+    --transition-speed: 0.3s;
+    --border-radius-lg: 15px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--text-light); /* putih agak biru */
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* === Navbar === */
+.navbar {
+    background: linear-gradient(90deg, var(--primary-blue-dark), var(--primary-blue-light));
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Bayangan lebih tegas */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar a {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease-in-out;
+    padding: 0.5rem 1rem; /* Menambahkan padding untuk area hover */
+    border-radius: 8px; /* Sudut sedikit membulat */
+    position: relative;
+    overflow: hidden; /* Untuk efek glow */
+}
+
+.navbar a:hover {
+    color: var(--accent-yellow) !important;
+    background-color: rgba(255, 255, 255, 0.1); /* Efek highlight saat hover */
+}
+
+.navbar a::before { /* Efek glow */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-speed) ease-in-out;
+    transform: skewX(-20deg);
+}
+
+.navbar a:hover::before {
+    left: 100%;
+}
+
+
+/* === Hero Section === */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue-light), var(--primary-blue-dark));
+    color: white;
+    padding: 100px 20px; /* Padding lebih besar */
+    text-align: center;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    /* Menambahkan pola halus */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 15V11h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 15v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-30 0v-4H0v4h-4v2h4v4h2v-4h4v-2h-4zM6 0v4H4V0H0V-2h4V-6h2v4h4V0H6zm0 15V11H4v4H0v2h4v4h2v-4h4v-2H6zm0 15v-4H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Ukuran font lebih besar */
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sedikit bayangan teks */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Ukuran font lebih besar */
+    opacity: 0.95;
+}
+
+/* === Card === */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Border halus */
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--card-shadow-light);
+    transition: all var(--transition-speed) ease-in-out;
+    overflow: hidden; /* Penting untuk gambar */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efek terangkat lebih tinggi */
+    box-shadow: var(--card-shadow-hover);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Zoom in gambar saat hover */
+}
+
+.card-title {
+    color: var(--primary-blue-dark);
+    font-weight: 700; /* Lebih tebal */
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+
+/* === Tombol === */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-blue-dark), var(--primary-blue-light));
+    border: none;
+    border-radius: 8px; /* Sudut sedikit membulat */
+    font-weight: 600;
+    padding: 0.75rem 1.8rem;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--primary-blue-light), var(--primary-blue-dark));
+    transform: translateY(-3px); /* Efek terangkat */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === Footer === */
+footer {
+    background: linear-gradient(90deg, var(--primary-blue-dark), var(--primary-blue-light));
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+.footer .list-unstyled a {
+  color: white;
+}
+.footer .list-unstyled a:hover {
+  color: var(--accent-yellow);
+  text-decoration: none;
+}
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.footer p, .footer li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: white;
+}
+.footer a {
+    color: white;
+    transition: color var(--transition-speed) ease;
+}
+.footer a:hover {
+    color: var(--accent-yellow);
+    text-decoration: none;
+}
+.footer .footer-credit-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    padding-top: 15px;
+}
+.footer .credit-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.credit-logo {
+  height: 100px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+
+.footer .copyright-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.dropdown-menu {
+  /* Background dropdown dibuat sedikit transparan agar modern */
+  background-color: rgba(30, 144, 255, 0.95); /* Warna biru gelap transparan */
+  backdrop-filter: blur(5px); /* Efek blur untuk background */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-item {
+  color: rgb(255, 255, 255) !important; /* WARNA TEKS JADI PUTIH */
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.1); /* Highlight putih transparan */
+  color: var(--accent-yellow) !important; /* WARNA TEKS HOVER JADI KUNING */
+  transform: translateX(5px);
+}
+
+/* ===== Submenu Styling (Revisi) ===== */
+.dropdown-submenu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-top: -1px;
+}
+
+
+/* === Animasi === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Responsive Adjustments ==== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .dropdown-submenu .dropdown-menu {
+        left: 0; /* Submenu di bawah saat mobile */
+        top: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* Tambahkan di src/components/Homepage.css */
+
+/* Wadah utama untuk hero slider */
+.hero-slider-container {
+  position: relative; /* Ini adalah kunci agar teks bisa ditumpuk di atasnya */
+  color: white;
+}
+
+/* Teks yang ditumpuk di atas */
+.hero-text-overlay {
+  position: absolute; /* Membuat elemen ini "melayang" di atas elemen lain */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Trik untuk menempatkan elemen pas di tengah */
+  text-align: center;
+  z-index: 10; /* Memastikan teks selalu di depan gambar */
+  width: 100%;
+  padding: 20px;
+}
+
+.hero-title-overlay {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Bayangan agar teks mudah dibaca */
+  margin: 0;
+}
+
+.hero-subtitle-overlay {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Tambahkan di src/components/Homepage.css */
+
+.carousel-slide {
+  position: relative; /* Diperlukan untuk overlay */
+  height: 60vh;
+  max-height: 500px;
+}
+
+/* Lapisan Overlay Biru */
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradien biru transparan */
+  background: linear-gradient(to top, rgba(30, 70, 150, 0.6), rgba(0, 191, 255, 0.3));
+  z-index: 1; /* Pastikan overlay di atas gambar */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pastikan teks berada di lapisan paling atas */
+.hero-text-overlay {
+  z-index: 2;
+}
+
+/* ... (kode CSS yang sudah ada) ... */
+
+/* === ATURAN RESPONSIVE === */
+
+/* Untuk Tablet dan di bawahnya (lebar maks 768px) */
+@media (max-width: 768px) {
+  .hero-title-overlay {
+    font-size: 2.5rem; /* Perkecil judul utama di hero */
+  }
+  .hero-subtitle-overlay {
+    font-size: 1.1rem; /* Perkecil subjudul */
+  }
+}
+
+/* Untuk Mobile (lebar maks 576px) */
+@media (max-width: 576px) {
+  .hero-title-overlay {
+    font-size: 2rem; /* Perkecil lagi judulnya */
+  }
+  .hero-subtitle-overlay {
+    font-size: 1rem;
+  }
+  footer .row > div {
+    text-align: center; /* Ratakan tengah konten footer */
+  }
+}

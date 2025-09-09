@@ -1,0 +1,148 @@
+/* src/pages/Pro4Page.css */
+
+.pro4-section {
+  background-color: white;
+  padding: 4rem 0;
+}
+
+.pro4-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === BAGIAN HEADER (Tema Hijau Limau) === */
+.pro4-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Warna ikon header diubah menjadi gradien hijau limau */
+.header-icon-circle {
+  width: 7rem;
+  height: 7rem;
+  background-image: linear-gradient(to bottom right, #bef264, #84cc16); /* Gradien hijau limau */
+  box-shadow: 0 6px 20px rgba(132, 204, 22, 0.4); /* Bayangan hijau limau lembut */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #3f6212; /* Hijau limau sangat gelap */
+  stroke-width: 1.5;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+/* Warna garis pemisah disesuaikan */
+.header-divider {
+  width: 6rem;
+  height: 4px;
+  background-color: #3b82f6; /* Biru cerah */
+  margin: 0 auto 1.25rem;
+  border-radius: 2px;
+}
+
+.header-subtitle, .header-description {
+  color: #475569;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.header-subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header-description {
+  line-height: 1.6;
+}
+
+/* === KARTU INFO (Tema Hijau Limau) === */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .info-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  color: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 1rem;
+  stroke-width: 1.5;
+}
+
+.info-card-title, .info-card-value {
+  font-weight: 600;
+}
+
+.info-card-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-card-value {
+  font-size: 1.5rem;
+}
+
+/* Warna gradien disempurnakan dengan tema baru */
+.info-card--frekuensi-pro4 {
+  background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
+}
+
+.info-card--siaran-pro4 {
+  background-image: linear-gradient(to bottom, #a3e635, #84cc16); /* Gradien hijau limau cerah */
+}
+
+.info-card--fokus-pro4 {
+  background-image: linear-gradient(to bottom, #2563eb, #3b82f6);
+}
+
+/* === JADWAL SIARAN === */
+.jadwal-header, .jadwal-title {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b;
+}

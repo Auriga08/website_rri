@@ -1,0 +1,94 @@
+/* src/components/ScheduleCard.css */
+
+.schedule-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.schedule-card-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.schedule-card-header:hover {
+  background-color: #f8fafc;
+}
+
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.schedule-time-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.schedule-title {
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}
+
+.schedule-title .event-name {
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.schedule-title .penyiar {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.expand-icon {
+  color: #94a3b8;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.schedule-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.schedule-card-body.expanded {
+  max-height: 600px; /* Atur tinggi maksimal yang cukup untuk gambar & teks */
+}
+
+.schedule-details {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 0.5rem;
+}
+
+.flyer-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description-text {
+  color: #334155;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}

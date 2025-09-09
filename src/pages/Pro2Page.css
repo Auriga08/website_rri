@@ -1,0 +1,146 @@
+/* src/pages/Pro2Page.css */
+
+.pro2-section {
+  background-color: white;
+  padding: 4rem 0;
+}
+
+.pro2-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === BAGIAN HEADER (Warna Disesuaikan) === */
+.pro2-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Diubah menjadi gradien dan diberi bayangan agar lebih hidup */
+.header-icon-circle {
+  width: 7rem;
+  height: 7rem;
+  background-image: linear-gradient(to bottom right, #2dd4bf, #22d3ee); /* Gradien toska */
+  box-shadow: 0 6px 20px rgba(28, 251, 225, 0.3); /* Bayangan toska lembut */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: white;
+  stroke-width: 1.5;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+/* Warna garis pemisah disesuaikan */
+.header-divider {
+  width: 6rem;
+  height: 4px;
+  background-color: #2dd4bf; /* Toska lebih gelap */
+  margin: 0 auto 1.25rem;
+  border-radius: 2px;
+}
+
+.header-subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.header-description {
+  max-width: 42rem;
+  margin: 0 auto;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* === KARTU INFO (Warna Disesuaikan) === */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .info-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  color: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Border dibuat sedikit lebih jelas */
+  transition: transform 0.2s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-5px); /* Efek hover sederhana */
+}
+
+.info-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 1rem;
+  stroke-width: 1.5;
+}
+
+.info-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.info-card-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Warna gradien disempurnakan */
+.info-card--frekuensi-pro2 {
+  background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
+}
+
+.info-card--siaran-pro2 {
+  background-image: linear-gradient(to bottom, #2dd4bf, #22d3ee);
+}
+
+.info-card--fokus-pro2 {
+  background-image: linear-gradient(to bottom, #2563eb, #3b82f6);
+}
+
+/* === JADWAL SIARAN === */
+.jadwal-header {
+  margin-bottom: 2rem;
+}
+.jadwal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b;
+}

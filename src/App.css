@@ -1,0 +1,54 @@
+/* src/App.css */
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: sans-serif;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+main {
+  margin-top: 40px;
+}
+
+button {
+  background-color: #61DAFB; /* Warna biru React */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* Tambahkan di src/components/Homepage.css */
+
+.admin-login-link a {
+  font-size: 0.5rem; /* Ukuran font lebih kecil */
+  color: #6c757d; /* Warna abu-abu */
+  text-decoration: none;
+  border: 1px solid #dee2e6; /* Border abu-abu muda */
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px; /* Membuat sudut sangat melengkung (pill shape) */
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-login-link a:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+  border-color: #ced4da;
+}

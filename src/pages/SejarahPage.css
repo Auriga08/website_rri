@@ -1,0 +1,90 @@
+/* src/pages/SejarahPage.css */
+
+.sejarah-section {
+  background-color: #f8f9fa;
+  padding: 4rem 1rem;
+}
+
+.sejarah-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sejarah-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 3rem; /* Menghapus subtitle dari sini */
+}
+
+.sejarah-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sejarah-subheading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e3a8a; /* Biru lebih gelap untuk subjudul */
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dbeafe; /* Garis bawah biru muda */
+}
+
+.sejarah-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.sejarah-quote {
+  border-left: 4px solid #3b82f6; /* Garis biru di kiri */
+  background-color: #f1f5f9; /* Latar belakang abu-abu */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+.sejarah-quote footer {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: right;
+  font-style: normal;
+}
+
+.sejarah-list-ol {
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.sejarah-author {
+  margin-top: 3rem;
+  text-align: right;
+  font-style: italic;
+  color: #64748b;
+}
+
+
+/* === ATURAN RESPONSIVE === */
+@media (max-width: 576px) {
+  .sejarah-container {
+    padding: 1.5rem; /* Kurangi padding di mobile agar konten lebih lega */
+  }
+  .sejarah-title {
+    font-size: 2rem;
+  }
+}

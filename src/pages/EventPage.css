@@ -1,0 +1,186 @@
+/* src/pages/EventPage.css */
+
+.event-section {
+  background-color: white; /* Latar belakang putih bersih */
+  padding: 4rem 1rem;
+}
+
+.event-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e3a8a; /* Biru tua */
+}
+
+.event-divider {
+  width: 6rem;
+  height: 4px;
+  background-color: #2563eb; /* Biru cerah */
+  margin: 1rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.event-subtitle {
+  font-size: 1.125rem;
+  color: #64748b; /* Abu-abu */
+}
+
+.event-section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.event-empty-state {
+  text-align: center;
+  padding: 2rem 0;
+  color: #94a3b8;
+}
+
+.event-empty-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  color: #cbd5e1;
+}
+
+/* KARTU EVENT MENDATANG BARU */
+.event-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Konten di bawah gambar */
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.event-card-image-wrapper {
+  width: 100%;
+  height: 200px; /* Tinggi gambar fixed */
+  overflow: hidden;
+}
+
+.event-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-card:hover .event-card-image {
+  transform: scale(1.05);
+}
+
+.event-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Agar konten mengisi sisa ruang */
+}
+
+.event-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+}
+
+.event-card-description {
+  color: #475569;
+  margin-bottom: 1.5rem; /* Jarak lebih besar ke detail */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Agar deskripsi bisa memanjang jika banyak teks */
+}
+
+.event-card-details-wrapper {
+  display: flex;
+  flex-direction: column; /* Item disusun vertikal */
+  gap: 0.5rem; /* Jarak antar item */
+  padding-top: 1rem; /* Garis di atas detail */
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto; /* Mendorong detail ke bawah */
+}
+
+.event-card-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569; /* Warna teks lebih gelap */
+  font-size: 0.9rem;
+}
+
+/* Past Event Card (tidak ada perubahan besar dari sebelumnya, hanya memastikan konsisten) */
+.past-event-card {
+  background-color: white; /* Mengubah dari gray-50 ke putih */
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Penting untuk border-radius image */
+}
+@media (min-width: 768px) {
+  .past-event-card {
+    flex-direction: row;
+  }
+}
+.past-event-image-wrapper {
+  flex-shrink: 0;
+  width: 100%; /* Default full width for mobile */
+  aspect-ratio: 16 / 9; /* Ensure aspect ratio on mobile */
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .past-event-image-wrapper {
+    width: 33.333333%;
+    aspect-ratio: unset; /* Remove aspect ratio for desktop */
+    height: 100%; /* Take full height on desktop */
+  }
+}
+.past-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Tidak perlu border-radius pada image, karena diatur di .past-event-card */
+.past-event-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+.past-event-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0f4c81;
+  margin-bottom: 0.75rem;
+}
+.past-event-description {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.past-event-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 1rem; /* Tambah jarak dari deskripsi */
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+.past-event-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}

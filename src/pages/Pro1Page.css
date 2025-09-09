@@ -1,0 +1,161 @@
+/* src/pages/Pro1Page.css */
+
+.pro1-section {
+  background-color: white;
+  padding: 4rem 0; /* 64px atas-bawah */
+}
+
+.pro1-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === BAGIAN HEADER === */
+.pro1-header {
+  text-align: center;
+  margin-bottom: 4rem; /* 64px */
+}
+
+.header-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* 32px */
+}
+
+.header-icon-circle {
+  width: 7rem; /* 112px */
+  height: 7rem; /* 112px */
+  background-color: #a5f3fc; /* cyan-200 */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon {
+  width: 3.5rem; /* 56px */
+  height: 3.5rem; /* 56px */
+  color: #0369a1; /* sky-600 */
+  stroke-width: 1.5;
+}
+
+.header-title {
+  font-size: 2.5rem; /* 40px */
+  font-weight: bold;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 0.75rem; /* 12px */
+}
+
+.header-divider {
+  width: 6rem; /* 96px */
+  height: 4px;
+  background-color: #3b82f6; /* blue-500 */
+  margin: 0 auto 1.25rem; /* 20px */
+}
+
+.header-subtitle {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #64748b; /* gray-500 */
+  margin-bottom: 1rem; /* 16px */
+}
+
+.header-description {
+  max-width: 42rem; /* 672px */
+  margin: 0 auto;
+  color: #475569; /* slate-600 */
+  line-height: 1.6;
+}
+
+/* === KARTU INFO === */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem; /* 32px */
+  margin-bottom: 5rem; /* 80px */
+}
+
+/* Aturan untuk layar medium ke atas */
+@media (min-width: 768px) {
+  .info-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  color: white;
+  border-radius: 0.75rem; /* 12px */
+  padding: 2rem; /* 32px */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-card-icon {
+  width: 2.25rem; /* 36px */
+  height: 2.25rem; /* 36px */
+  margin-bottom: 1rem; /* 16px */
+  stroke-width: 1.5;
+}
+
+.info-card-title {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.info-card-value {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+}
+
+/* Warna spesifik untuk setiap kartu */
+.info-card--frekuensi {
+  background-image: linear-gradient(to bottom, #1d4ed8, #1e3a8a); /* blue-700 to blue-900 */
+}
+
+.info-card--siaran {
+  background-image: linear-gradient(to bottom, #22d3ee, #0ea5e9); /* cyan-400 to sky-500 */
+}
+
+.info-card--jangkauan {
+  background-image: linear-gradient(to bottom, #3b82f6, #1d4ed8); /* blue-500 to blue-700 */
+}
+
+
+/* === JADWAL SIARAN === */
+.jadwal-header {
+  margin-bottom: 2rem;
+}
+
+.jadwal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.loading-spinner-wrapper {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 4px solid #3b82f6;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
