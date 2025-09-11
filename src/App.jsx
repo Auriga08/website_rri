@@ -20,7 +20,7 @@ import { ManageEventsPage } from './admin/ManageEventsPage';
 function App() {
   return (
      <Routes>
-      <Route path="/" element={<Homepage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/pro1" element={<Pro1Page />} />
       <Route path="/pro2" element={<Pro2Page />} />
       <Route path="/pro4" element={<Pro4Page />} />
